@@ -14,16 +14,15 @@ from PyQt4 import QtGui
 
 
 def main():
-    
     app = QtGui.QApplication(sys.argv)
 
     w = View()
-    m = Model();
-    c = Controller(w, m);
-    w.initUI(c);
+    m = Model()
+    c = Controller(w, m)
+    w.initUI(c)
     w.show()
-    c.loadServers();
-    
+    c.loadServers()
+
     sys.exit(app.exec_())
 
 

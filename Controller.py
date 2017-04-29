@@ -10,17 +10,18 @@ class Controller():
     def __init__(self, w, m):
         self.w = w
         self.m = m
-        
+
     def loadServers(self):
         self.w.loadServers(self.m.getServers())
-        
+
     def addServer(self, IP):
         self.m.addServer(IP)
-        self.loadServers();
-        
+        self.loadServers()
+
     def openServer(self, IP):
-        subprocess.Popen(['/usr/local/games/enemy-territory/et', '+connect', IP])
-        
+        subprocess.Popen(
+            ['/usr/local/games/enemy-territory/et', '+connect', IP])
+
     def delServer(self, IP):
         self.m.delServer(IP)
-        self.loadServers();
+        self.loadServers()
