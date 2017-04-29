@@ -1,6 +1,6 @@
 # ETstat
 
-This is a simple program to browser Wolfenstein Enemy Territory servers. It uses
+This is a simple program to browse Wolfenstein Enemy Territory servers. It uses
 [Qstat](https://github.com/multiplay/qstat) to query the master server (make
 sure to have that installed).
 
