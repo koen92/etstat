@@ -1,16 +1,10 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
 
-"""
-ZetCode PyQt4 tutorial 
+'''
+Created on 12 Sep 2013
 
-In this example, we create a simple
-window in PyQt4.
-
-author: Jan Bodnar
-website: zetcode.com 
-last edited: October 2011
-"""
+@author: koen
+'''
 
 import sys
 from View import View
@@ -29,11 +23,6 @@ def main():
     w.initUI(c);
     w.show()
     c.loadServers();
-    #c.loadServers();
-            
-    #server = [ "kernwaffe", "127.0.0.1", "20", "9/10" ]
-    #w.addServer(server);
-    
     
     sys.exit(app.exec_())
 

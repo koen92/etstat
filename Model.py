@@ -53,9 +53,13 @@ class Model():
     def getServers(self):
         servers = [];
         ips = self.readIPs()
-        for i in ips:
-            proc = subprocess.Popen(['quakestat', '-xml', '-woets', i], stdout=subprocess.PIPE)
-            servers.append(self.parseServer(proc.stdout.read()));
+        for ip in ips:
+            proc = subprocess.Popen(['quakestat', '-xml', '-woets', ip], stdout=subprocess.PIPE)
+            try:
+                servers.append(self.parseServer(proc.stdout.read()));
+            except AttributeError:
+                print("Invalid server: " + ip)
+                self.delServer(ip[:-1]) # Stripping trailing \n
         return servers
 
     def addServer(self, IP):
